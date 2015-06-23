@@ -18,8 +18,6 @@ ActiveRecord::Schema.define(version: 20150623103433) do
     t.text     "color"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
-    t.integer  "connector_type_1"
-    t.integer  "connector_type_2"
     t.integer  "connector_type_1_id"
     t.integer  "connector_type_2_id"
   end
