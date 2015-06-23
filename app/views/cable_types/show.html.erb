@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Length:</strong>
+  <%= @cable_type.length %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @cable_type.color %>
+</p>
+
+<%= link_to 'Edit', edit_cable_type_path(@cable_type) %> |
+<%= link_to 'Back', cable_types_path %>

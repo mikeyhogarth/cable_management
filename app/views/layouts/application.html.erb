@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CableManagement</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<ul id="nav">
+  <li><%= link_to "Connector Types", connector_types_path %></li>
+  <li><%= link_to "Cable Types", cable_types_path %></li>
+  <li><%= link_to "Cables", cables_path %></li>
+</ul>
+
+<%= yield %>
+
+</body>
+</html>

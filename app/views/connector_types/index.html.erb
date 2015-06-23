@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Connector Types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @connector_types.each do |connector_type| %>
+      <tr>
+        <td><%= connector_type.name %></td>
+        <td><%= link_to 'Show', connector_type %></td>
+        <td><%= link_to 'Edit', edit_connector_type_path(connector_type) %></td>
+        <td><%= link_to 'Destroy', connector_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Connector type', new_connector_type_path %>

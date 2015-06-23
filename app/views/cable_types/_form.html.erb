@@ -1,0 +1,36 @@
+<%= form_for(@cable_type) do |f| %>
+  <% if @cable_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cable_type.errors.count, "error") %> prohibited this cable_type from being saved:</h2>
+
+      <ul>
+      <% @cable_type.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :length %><br>
+    <%= f.number_field :length %>
+  </div>
+  <div class="field">
+    <%= f.label :color %><br>
+    <%= f.text_area :color %>
+  </div>
+
+  <div class="field">
+    <%= f.label :connector_1_type %><br>
+    <%= f.collection_select :connector_type_1_id, ConnectorType.all, :id, :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :connector_2_type %><br>
+    <%= f.collection_select :connector_type_2_id, ConnectorType.all, :id, :name %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

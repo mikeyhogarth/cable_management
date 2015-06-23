@@ -1,0 +1,2 @@
+module ConnectorTypesHelper
+end

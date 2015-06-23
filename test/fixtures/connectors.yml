@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cable_id: 1
+  end: 1
+  device_id: 1
+
+two:
+  cable_id: 1
+  end: 1
+  device_id: 1
